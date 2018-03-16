@@ -554,7 +554,7 @@ if [[ "$@" =~ "--assign" ]]; then
 	classify.otu(
 	taxonomy=${class_dir}/${prefixus}.trim.contigs.good.unique.good.filter.precluster.pick.nr_v132.wang.taxonomy,
  	list=${clean_dir}/${prefixus}.trim.contigs.good.unique.good.filter.precluster.pick.opti_mcc.0.03.pick.list,
-  	count=${clean_dir}/${prefixus}.trim.contigs.good.unique.good.filter.precluster.denovo.vsearch.pick.pick.count_table);
+  	count=${clean_dir}/${prefixus}.trim.contigs.good.unique.good.filter.precluster.denovo.vsearch.pick.pick.count_table,
 	cutoff=51)"
     endus=$(date +%s)
     elapsus=$((endus - startus))
