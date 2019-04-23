@@ -5,7 +5,7 @@ library(ggplot2)
 library(cowplot)
 library(ape)
 
-pred <- read_delim("Desktop/beta_1000/predires.trim.contigs.good.unique.good.filter.precluster.pick.pick.opti_mcc.braycurtis.0.03.square.dist", 
+pred <- read_delim("..data/beta_1000/ceremi.trim.contigs.good.unique.good.filter.precluster.pick.pick.opti_mcc.braycurtis.0.03.square.dist", 
                    "\t", escape_double = FALSE, col_names = FALSE, 
                    trim_ws = TRUE, skip = 1)
 

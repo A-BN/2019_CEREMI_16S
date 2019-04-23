@@ -14,7 +14,7 @@ n_threadus=8
 ################################# Make groups ##################################
 ################################################################################
 read_dir="../data/reads/"
-prefixus="predires"
+prefixus="ceremi"
 echo "STEP : $stepus"
 if [ "$1" == 1 ]; then
 	startus=$(date +%s)
@@ -24,11 +24,11 @@ if [ "$1" == 1 ]; then
 	            type=gz, 
 		    	numcols = 2,
 	            prefix=${prefixus})"
-	# Adding the sample name as the first col in predires.files 
+	# Adding the sample name as the first col in ${prefixus}.files 
 	# and changing - to _ in order to please the mothur gods
 	sed -r -i 's:(^.*/(.*)_S.*_L0.*fastq.gz):\2 \1:g' \
-	    "${read_dir}/predires.files"
-	sed -i 's/-/_/' "${read_dir}/predires.files"
+	    "${read_dir}/${prefixus}.files"
+	sed -i 's/-/_/' "${read_dir}/${prefixus}.files"
 	endus=$(date +%s)
 	elapsus=$((endus - startus))
 	echo "Time elapsed in s"
